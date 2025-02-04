@@ -9,7 +9,7 @@ export default function Sidebar({ initialMenuItems }) {
   // State to handle the new menu item input field
   let [newMenuItem, setNewMenuItem] = useState("");
   
-  // TODO: 2 Using a state hook, maintain the current menu items as an array state.
+  // Task: 2 Using a state hook, maintain the current menu items as an array state.
   // Initialize menuItems with the initialMenuItems prop.
   let [menuItems, setMenuItems] = useState(initialMenuItems);
   
@@ -21,18 +21,19 @@ export default function Sidebar({ initialMenuItems }) {
     console.log("Added menu item");
     if (newMenuItem.trim()) {
       // Add the new menu item to the list
+     // Task: 3. Add a new menu item to the correct variable associated with this class
       setMenuItems([newMenuItem, ...menuItems]);
       setNewMenuItem(""); // Clear the input after adding
     }
   }, [newMenuItem, menuItems]);
 
-  // TODO: 4. Display ONLY the menu items that contain the filter element value
+  // Task: 4. Display ONLY the menu items that contain the filter element value
   // Filter the menu items based on the filter value
   const filteredMenuItems = menuItems.filter((item) =>
     item.toLowerCase().includes(filter.toLowerCase())
   );
 
-  // TODO: 1. Render an unordered list of the menu items
+  // Task: 1. Render an unordered list of the menu items
   return (
     <div>
       <input
