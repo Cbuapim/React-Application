@@ -21,7 +21,8 @@ export default function Sidebar({ initialMenuItems }) {
     console.log("Added menu item");
     if (newMenuItem.trim()) {
       // Add the new menu item to the list
-     // Task: 3. Add a new menu item to the correct variable associated with this class
+     // Task: 3. Add a new menu item to the correct variable associated with this class 
+      
       setMenuItems([newMenuItem, ...menuItems]);
       setNewMenuItem(""); // Clear the input after adding
     }
